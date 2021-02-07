@@ -12,7 +12,7 @@ However, faceauth uses ageitgey's [face_recognition](https://github.com/ageitgey
 
 A monitoring process launches the program when the system goes into a locked state. If your camera/webcam has an LED, it will turn active indicating that the program is searching for faces. If the program cannot find a face within 5 seconds, it will go idle and await user interaction (through the mouse). When a mouse movement event is triggered, the camera will become active again.
 
-The [monitoring pipeline](https://github.com/Raais/faceauth/blob/main/faceauth.sh) and the session unlock command is configured for Manjaro KDE; and should work for Gnome and other DEs with minimal tinkering.
+The [monitoring pipeline](https://github.com/Raais/faceauth/blob/ed5bd3ef99f378e48a980580bf428f0bfa0dfc6c/faceauth.sh#L63) and the session unlock command is configured for Manjaro KDE; and should work for Gnome and other DEs with minimal tinkering.
 
 #### PAM
 
