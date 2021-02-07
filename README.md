@@ -36,6 +36,12 @@ This module is extremely unsecure as you have to locally save your password in a
   * [face_recognition](https://github.com/ageitgey/face_recognition)
   * xdotool (optional, for sudo module)
   
+#### Clone this repo
+
+``bash
+git clone https://github.com/Raais/faceauth.git
+```
+  
 Finally, install cv2, numpy, pynput, python-decouple:
 
 ```bash
