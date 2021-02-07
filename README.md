@@ -74,3 +74,8 @@ and you will be prompted to create a face model the first time. If not, the prog
 
 
 If you know how to [daemonize](https://unix.stackexchange.com/questions/426862/proper-way-to-run-shell-script-as-a-daemon) the [faceauth.sh](https://github.com/Raais/faceauth/blob/main/faceauth.sh), you can make it run persistently in the background or autostart. Otherwise, just add a startup script some other way, for example in KDE, Settings > Startup and Shutdown > Autostart > Add Login Script
+
+You can also just run it in the background manually,
+```bash
+nohup sh faceauth.sh &>/dev/null &
+```
