@@ -50,7 +50,7 @@ pip3 install cv2 numpy pynput python-decouple
 
 ## Running
 
-#### Create your face model
+#### Create your face model first
 
 ```bash
 python3 test.py
