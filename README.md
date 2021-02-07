@@ -64,7 +64,7 @@ python3 test.py
 sh faceauth.sh
 ```
 
-Make sure [faceauth.sh](https://github.com/Raais/faceauth/blob/main/faceauth.sh) and [unlock.sh](https://github.com/Raais/faceauth/blob/main/unlock.sh) are properly configured for your desktop environment before running. Ignore this step if you use KDE Plasma.
+Make sure [faceauth.sh](https://github.com/Raais/faceauth/blob/main/faceauth.sh) and [unlock.sh](https://github.com/Raais/faceauth/blob/main/unlock.sh) are properly configured for your desktop environment before running, unless you are running KDE Plasma.
 
 
 If you just want to test out faceauth,
