@@ -50,6 +50,12 @@ pip3 install cv2 numpy pynput python-decouple
 
 ## Running
 
+#### Create your face model
+
+```bash
+python3 test.py
+```
+
 **[faceauth.sh](https://github.com/Raais/faceauth/blob/main/faceauth.sh)** is the main process that handles monitoring and launching.
 
 ```bash
