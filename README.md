@@ -38,7 +38,7 @@ This module is extremely unsecure as you have to locally save your password in a
   
 #### Clone this repo
 
-``bash
+```bash
 git clone https://github.com/Raais/faceauth.git
 ```
   
