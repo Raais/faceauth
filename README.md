@@ -4,7 +4,7 @@ faceauth uses ageitgey's [face_recognition](https://github.com/ageitgey/face_rec
 
 ## Usage
 
-When called, **[auth.py](https://github.com/Raais/faceauth/blob/main/auth.py)** will capture from the default camera (set in [.env](https://github.com/Raais/faceauth/blob/main/.env)), validate and return a status code 0-5:
+When called, **[auth.py](https://github.com/Raais/faceauth/blob/main/auth.py)** will capture from the default camera (set in [.env](https://github.com/Raais/faceauth/blob/main/.env) as 0), validate and return a status code 0-5:
 
 STATUS 0 = no match  
 STATUS 1 = match  
