@@ -1,4 +1,4 @@
-# https://raw.githubusercontent.com/boltgolt/howdy/master/src/pam.py
+# Forked https://raw.githubusercontent.com/boltgolt/howdy/master/src/pam.py
 
 # PAM interface in python, launches compare.py
 
@@ -46,7 +46,7 @@ def doAuth(pamh):
 
     # Run compare as python3 subprocess to circumvent python version and import issues
     status = subprocess.call(["/usr/bin/python3", os.path.dirname(
-        os.path.abspath(__file__)) + "/main.py", pamh.get_user()])
+        os.path.abspath(__file__)) + "/auth.py", pamh.get_user()])
 
     # Status 3 means we couldn't find any face models
     if status == 3:
