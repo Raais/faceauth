@@ -30,10 +30,10 @@ STATUS 5 = unclear source image [[r]](https://github.com/Raais/faceauth/blob/e46
 git clone https://github.com/Raais/faceauth.git
 ```
   
-#### Finally, install cv2, python-decouple:
+#### Finally, install cv2, decouple:
 
 ```bash
-pip3 install cv2 python-decouple
+pip3 install opencv-python python-decouple
 ```
 
 ### Create a face model first:
