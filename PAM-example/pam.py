@@ -1,6 +1,6 @@
 # Forked https://raw.githubusercontent.com/boltgolt/howdy/master/src/pam.py
 
-# PAM interface in python, launches compare.py
+# PAM interface in python, launches ~~compare.py~~ auth.py
 
 # Import required modules
 import subprocess
