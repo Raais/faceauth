@@ -1,8 +1,9 @@
 import subprocess
 import os
+import time
 
 code = subprocess.call(
-    ["/usr/bin/python3", os.path.dirname(os.path.abspath(__file__)) + "/main.py"])
+    ["/usr/bin/python3", os.path.dirname(os.path.abspath(__file__)) + "/auth.py"])
 
 if code == 0:
     print("DENIED")
@@ -12,10 +13,13 @@ elif code == 2:
     print("TIMEOUT")
 elif code == 3:
     print("NO SOURCE FILE")
+    print("Calling add.py")
+    time.sleep(0.5)
+    subprocess.call(
+        ["/usr/bin/python3", os.path.dirname(os.path.abspath(__file__)) + "/add.py"])
+    exit()
 elif code == 4:
     print("NO CAMERA")
-elif code == 12:
-    print("ABORTED")
 
 # STATUS 0 = not match
 # STATUS 1 = match

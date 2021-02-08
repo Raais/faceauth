@@ -8,18 +8,13 @@ from datetime import datetime
 from decouple import config
 
 # opencv camera selector (.env)
-CAM = config('CAMERA')
+cam = config('CAMERA')
 
-# checking if base model exists
+# exit if no source file (create source file in add.py)
 if path.exists("source/source.jpg") == False:
-    if input("No face model exists. Create one now? (y/n)") != "y":
-        exit()
-    subprocess.call(
-        ["/usr/bin/python3", os.path.dirname(os.path.abspath(__file__)) + "/add.py"])
-    print("Success. Face model saved as ./source/source.jpg")
-    exit()
+    sys.exit(3)
 
-cn = int(CAM)
+cn = int(cam)
 
 video_capture = cv2.VideoCapture(cn)
 
@@ -27,18 +22,10 @@ baseimg = face_recognition.load_image_file("source/source.jpg")
 encoding = face_recognition.face_encodings(baseimg)[0]
 
 fail = 0
-status = 0
-
-
-def spawn(program, exit_code=2):
-    subprocess.Popen(program)
-    sys.exit(exit_code)
-
 
 def cap():
     # main face authentication function
     global fail
-    global status
 
     # exit if no camera exists
     if video_capture.read()[0] == False:
@@ -58,23 +45,22 @@ def cap():
             [encoding], face_encodings)
 
         if results[0] == True:
-            status = 1
+            sys.exit(1)
             # successful authorization
         else:
-            # if not match, take photo of intruder :D
-            now = datetime.now().time()
-            s = "fails/{}.png".format(now)
-            cv2.imwrite(s, frame)
-            #os.system("xdotool key Up")
-            status = 0
+            # comment out next 3 to record non match face to dir fails/
+            #now = datetime.now().time()
+            #s = "fails/{}.png".format(now)
+            #cv2.imwrite(s, frame)
+            sys.exit(0)
 
     except IndexError:
         # indexerror denotes that no faces could be identified
         # not present, etc
         fail = fail + 1
         if fail >= 90:
-            # if more than 90 fails / ~~5 seconds, exit main.py (close camera) and call mouse movement listener (for awaiting user interaction)
-            spawn(["/usr/bin/python3", "./listener.py"])
+            #90 fails = ~~5s .No faces found, exiting with status 2
+            sys.exit(2)
         else:
             cap()  # start over if <90
 
@@ -82,17 +68,9 @@ def cap():
 
 
 cap()
-# Status code returns useful if you want to implement your own authentication system using faceauth
-if status == 0:
-    sys.exit(0)
-elif status == 1:
-    sys.exit(1)
-elif status == 2:
-    sys.exit(2)
 
 # STATUS 0 = not match
 # STATUS 1 = match
 # STATUS 2 = timeout
 # STATUS 3 = no source file
 # STATUS 4 = no camera
-# STATUS 12 = abort

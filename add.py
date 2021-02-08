@@ -1,9 +1,20 @@
 import face_recognition
 import cv2
-import numpy as np
 import sys
+import time
+from os import path
+import os
 
 video_capture = cv2.VideoCapture(0)
+
+print("[add.py]")
+
+if path.exists("source/source.jpg") == False:
+    if input("No face model exists. Create one now? (y/n) ") != "y":
+        exit()
+else:
+    print("source.jpg exists. Exiting...")
+    exit()
 
 face_locations = []
 face_encodings = []
@@ -20,8 +31,12 @@ def cap():
 
         face_locations = face_recognition.face_locations(rgb_small_frame)
         face_encodings = face_recognition.face_encodings(rgb_small_frame)[0]
+        #Searching for faces in frame
 
-        cv2.imwrite('source/source.jpg', frame)
+        #save if no exceptions
+        print("Capturing image. Please stay still.")
+        time.sleep(1.5)
+        cv2.imwrite('source/source.jpg', rgb_small_frame)
 
     except IndexError:
         cap()
@@ -30,4 +45,4 @@ def cap():
 
 
 cap()
-sys.exit(0)
+exit()
