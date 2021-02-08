@@ -9,7 +9,7 @@ When called, **[auth.py](https://github.com/Raais/faceauth/blob/main/auth.py)** 
 STATUS 0 = no match  
 STATUS 1 = match  
 STATUS 2 = timeout  
-STATUS 3 = no source file  
+STATUS 3 = no source image  
 STATUS 4 = no camera  
 STATUS 5 = source image fail [[r]](https://github.com/Raais/faceauth/blob/e46dd0458639ffc02bcc85b82ac0f038bc8384d0/auth.py#L26)
 
