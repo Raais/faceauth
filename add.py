@@ -36,7 +36,7 @@ def cap():
         #save if no exceptions
         print("Capturing image. Please stay still.")
         time.sleep(1.5)
-        cv2.imwrite('source/source.jpg', rgb_small_frame)
+        cv2.imwrite('source/source.jpg', frame)
 
     except IndexError:
         cap()
