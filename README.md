@@ -11,7 +11,7 @@ STATUS 1 = match
 STATUS 2 = timeout  
 STATUS 3 = no source file  
 STATUS 4 = no camera  
-STATUS 5 = base image fail[[r]](https://github.com/Raais/faceauth/blob/e46dd0458639ffc02bcc85b82ac0f038bc8384d0/auth.py#L26)
+STATUS 5 = base image fail [[r]](https://github.com/Raais/faceauth/blob/e46dd0458639ffc02bcc85b82ac0f038bc8384d0/auth.py#L26)
 
 ## Installation
 
