@@ -29,13 +29,13 @@ STATUS 4 = no camera
 git clone https://github.com/Raais/faceauth.git
 ```
   
-Finally, install cv2, python-decouple:
+#### Finally, install cv2, python-decouple:
 
 ```bash
 pip3 install cv2 python-decouple
 ```
 
-#### Create a face model first:
+### Create a face model first:
 
 ```bash
 python3 test.py
