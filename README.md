@@ -1,6 +1,6 @@
 # faceauth
 
-faceauth uses ageitgey's [face_recognition](https://github.com/ageitgey/face_recognition) which claims a [99.38% accuracy model](https://github.com/ageitgey/face_recognition#face-recognition).
+faceauth uses [dlib](http://dlib.net)'s face recognition model which claims an [accuracy of 99.38%](https://github.com/davisking/dlib/blob/9f6aefc0db01e1d2edca666bb4d9dc76240b9074/python_examples/face_recognition.py#L16).
 
 ## Usage
 
