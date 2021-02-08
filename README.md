@@ -1,6 +1,6 @@
 # faceauth
 
-faceauth uses ageitgey's [face_recognition](https://github.com/ageitgey/face_recognition) library which claims a [99.38% accuracy model](https://github.com/ageitgey/face_recognition#face-recognition).
+faceauth uses ageitgey's [face_recognition](https://github.com/ageitgey/face_recognition) which claims a [99.38% accuracy model](https://github.com/ageitgey/face_recognition#face-recognition).
 
 ## Usage
 
