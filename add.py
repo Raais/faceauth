@@ -13,7 +13,7 @@ if path.exists("source/source.jpg") == False:
     if input("No face model exists. Create one now? (y/n) ") != "y":
         exit()
 else:
-    print("source.jpg exists. Exiting...")
+    print("source.jpg already exists. Exiting...")
     exit()
 
 face_locations = []
