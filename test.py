@@ -20,10 +20,12 @@ elif code == 3:
     exit()
 elif code == 4:
     print("NO CAMERA")
+elif code == 5:
+    print("BASE IMAGE FAIL. PLEASE DELETE SOURCE/SOURCE.JPG AND CREATE A NEW ONE WITH ADD.PY")
 
 # STATUS 0 = not match
 # STATUS 1 = match
 # STATUS 2 = timeout
 # STATUS 3 = no source file
 # STATUS 4 = no camera
-# STATUS 12 = abort
+# STATUS 5 = base image fail

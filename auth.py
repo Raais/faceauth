@@ -18,8 +18,13 @@ cn = int(cam)
 
 video_capture = cv2.VideoCapture(cn)
 
-baseimg = face_recognition.load_image_file("source/source.jpg")
-encoding = face_recognition.face_encodings(baseimg)[0]
+try:
+    baseimg = face_recognition.load_image_file("source/source.jpg")
+    encoding = face_recognition.face_encodings(baseimg)[0]
+
+except:
+    # exit if no face/unclear face in source.jpg
+    sys.exit(5)
 
 fail = 0
 
@@ -74,3 +79,4 @@ cap()
 # STATUS 2 = timeout
 # STATUS 3 = no source file
 # STATUS 4 = no camera
+# STATUS 5 = base image fail
