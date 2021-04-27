@@ -53,7 +53,7 @@ def cap():
             sys.exit(1)
             # successful authorization
         else:
-            # comment out next 3 to record non match face to dir fails/
+            # uncomment next 3 to record non match face to dir fails/
             #now = datetime.now().time()
             #s = "fails/{}.png".format(now)
             #cv2.imwrite(s, frame)
